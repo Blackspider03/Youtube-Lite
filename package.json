@@ -1,0 +1,46 @@
+
+{
+  "name": "youtube-lite",
+  "version": "1.0.0",
+  "description": "A lightweight YouTube browser",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "build": {
+    "appId": "com.youtubelite.desktop",
+    "productName": "YouTube Lite",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "style.css",
+      "renderer.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^39.8.10",
+    "electron-builder": "^26.0.0"
+  },
+  "allowScripts": {
+    "electron@39.8.10": true
+  },
+  "dependencies": {
+    "@ghostery/adblocker-electron": "^2.20.3",
+    "cross-fetch": "^4.1.0"
+  }
+}

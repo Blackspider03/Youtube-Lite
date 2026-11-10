@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'">
+  <title>YouTube Lite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="brand"><span class="brand-icon">▶</span><span>YouTube <b>Lite</b></span></div>
+    <nav class="navigation" aria-label="Browser navigation">
+      <button id="back" title="Back" aria-label="Back">←</button>
+      <button id="forward" title="Forward" aria-label="Forward">→</button>
+      <button id="reload" title="Reload" aria-label="Reload">↻</button>
+      <button id="home" title="Home" aria-label="Home">⌂</button>
+    </nav>
+    <div class="address"><span class="lock">●</span><span id="address">youtube.com</span></div>
+    <div class="adblock"><span class="shield">◆</span><span class="ad-label">Ad Block</span><label class="switch" title="Toggle ad blocking"><input type="checkbox" id="adblock-toggle" aria-label="Ad blocking"/><span class="slider"></span></label><span id="adblock-status">ON</span></div>
+  </header>
+  <script src="renderer.js"></script>
+</body>
+</html>
